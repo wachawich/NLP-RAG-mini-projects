@@ -22,7 +22,7 @@ load_dotenv("/opt/airflow/.env")
 pc = Pinecone(api_key=os.getenv("PINE_CONE_API_KEY"))
 index = pc.Index("wiki-embeddings")
 
-co = CohereClient(f"{os.getenv("COHERE_API_KEY")}")
+co = CohereClient(os.getenv("COHERE_API_KEY"))
 
 groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
