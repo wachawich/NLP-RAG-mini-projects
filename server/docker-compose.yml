@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  rag_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rag_server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/app 
+    environment:
+      - FLASK_APP=server.py
+      - FLASK_ENV=development
+      - FLASK_RUN_HOST=0.0.0.0
+    command: flask run --host=0.0.0.0
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx_proxy
+    ports:
+      - "80:80" # เปิด Port 80 ให้โลกภายนอก (Azure VM) เข้าถึงได้
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    depends_on:
+      - rag_server
+    restart: unless-stopped

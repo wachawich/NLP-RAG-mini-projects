@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif, "IBM Plex Sans Thai";
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: #33343f;
+}
+
+.chatbox-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.chat{
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  border-radius: 15px;
+  animation: fadeIn 0.5s ease forwards; 
+  font-family: "IBM Plex Sans Thai";
+}
+
+.chat img{
+  width: 45px;
+  height: 45px;
+}
+
+.response{
+  /* background-color: #494b59; */
+  font-family: "IBM Plex Sans Thai";
+  animation: fadeIn 0.5s ease forwards; 
+}
+
+.response span{
+  font-family: "IBM Plex Sans Thai";
+  animation: fadeIn 0.5s ease forwards; 
+}
+
+.response.new{
+  animation: fadeIn 0.5s ease forwards; 
+}
+
+.chat.message {
+  justify-content: flex-end;
+  padding: 40px 20px;
+}
+
+.messagebar{
+  position: fixed;
+  bottom: 0;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-top: 1px solid #494b59;
+  background-color: #33343f; */
+}
+
+.messagebar .bar-wrapper{
+  background-color: #494b59;
+  width: 60vw;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+.bar-wrapper input{
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: none;
+  color: #ccc;
+}
+
+.bar-wrapper input::placeholder{
+  color: #ccc;
+}
+
+.messagebar button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.message-box{
+  height: calc(100vh - 5rem);
+  overflow-y: auto;
+  width: 65%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* Optional: Slide in effect */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

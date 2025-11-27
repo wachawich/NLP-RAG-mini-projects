@@ -1,0 +1,48 @@
+# ---- Node.js ----
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+dist/
+build/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.env/
+
+# ---- Environment ----
+.env
+.env.local
+.env.*.local
+**/.env
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+
+# ---- Logs ----
+logs
+*.log
+
+# ---- IDE ----
+.vscode/
+.idea/
+
+# ---- Docker ----
+*.pid
+tmp/
+
+*.db
+*.parquet
+pipeline/data/
+pipeline/shared/
+pipeline/shared/*.db
+pipeline/shared/*.parquet
+
