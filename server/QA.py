@@ -66,6 +66,7 @@ def ask(groq_client, result, question: str, display_markdown: bool = True):
     return answer
     # if display_markdown:
     #     display(Markdown(answer))
+    # sima
 
 
 
