@@ -9,3 +9,4 @@ tf_keras
 flask
 flask_cors
 numpy
+pandas
