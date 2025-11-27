@@ -16,8 +16,8 @@ from groq import Groq
 from search import rag_search
 from QA import ask
 
-# load_dotenv("/opt/airflow/.env")
-load_dotenv()
+load_dotenv("/opt/airflow/.env")
+# load_dotenv()
 
 pc = Pinecone(api_key=os.getenv("PINE_CONE_API_KEY"))
 index = pc.Index("wiki-embeddings")
