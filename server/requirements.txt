@@ -5,5 +5,5 @@ cohere
 transformers==4.43.3
 sentence-transformers>=2.2.2,<3
 python-dotenv
-typing
 tf_keras
+flask
