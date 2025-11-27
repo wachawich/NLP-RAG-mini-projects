@@ -2,7 +2,7 @@ const messageBar = document.querySelector(".bar-wrapper input");
 const sendBtn = document.querySelector(".bar-wrapper button");
 const messageBox = document.querySelector(".message-box");
 
-let API_URL = "http://127.0.0.1:5000/api/qa";
+let API_URL = "20.189.115.120/api/qa";
 
 
 // Function to send message
