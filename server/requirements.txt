@@ -7,3 +7,5 @@ sentence-transformers>=2.2.2,<3
 python-dotenv
 tf_keras
 flask
+flask_cors
+numpy
